@@ -36,9 +36,7 @@ public class App {
         if(!DONE.equals(value)) {
           try {
             Thread.sleep(10);
-            if (Long.valueOf(value.substring(3)) % 1000 == 0) {
-              log.info("Processed another 1000 messages");
-            }
+
           } catch (InterruptedException e) {
             log.error(e);
           }
