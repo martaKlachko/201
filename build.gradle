@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.bmuschko.docker-java-application' version '6.4.0'
+    id 'com.bmuschko.docker-java-application' version '4.10.0'
 }
 
 repositories {
@@ -31,13 +31,13 @@ task fatJar(type: Jar) {
 
 docker {
     javaApplication {
-        if (System.getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
+        
             registryCredentials {
                 url = 'https://eu.gcr.io'
                 username = '_json_key'
                 password = file(System.getenv('GOOGLE_APPLICATION_CREDENTIALS')).text
             }
-        }
+        
         baseImage = 'openjdk:11-jdk'
         maintainer = 'Grzegorz Kocur "grzegorz.kocur@softwaremill.com"'
         tag = 'eu.gcr.io/project201/' + project.name.toLowerCase() + ':latestmarta'
