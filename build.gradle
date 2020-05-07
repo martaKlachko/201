@@ -40,7 +40,7 @@ docker {
         }
         baseImage = 'openjdk:11-jdk'
         maintainer = 'Grzegorz Kocur "grzegorz.kocur@softwaremill.com"'
-        tag = 'eu.gcr.io/kafka-streams-scaling/' + project.name.toLowerCase() + ':latestmarta'
+        tag = 'eu.gcr.io/project201/' + project.name.toLowerCase() + ':latestmarta'
         jvmArgs = [ "-Dcom.sun.management.jmxremote.port=5555",
                     "-Dcom.sun.management.jmxremote.authenticate=false",
                     "-Dcom.sun.management.jmxremote.ssl=false"]
