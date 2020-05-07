@@ -33,7 +33,7 @@ docker {
     javaApplication {
         
             registryCredentials {
-                url = 'https://eu.gcr.io'
+                url = 'http://eu.gcr.io'
                 username = '_json_key'
                 password = file(System.getenv('GOOGLE_APPLICATION_CREDENTIALS')).text
             }
