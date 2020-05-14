@@ -31,16 +31,17 @@ task fatJar(type: Jar) {
 
 docker {
     javaApplication {
-        
+
             registryCredentials {
                 url = 'http://eu.gcr.io'
                 username = '_json_key'
+              
                 password = file(System.getenv('GOOGLE_APPLICATION_CREDENTIALS')).text
             }
-        
+
         baseImage = 'openjdk:11-jdk'
         maintainer = 'Grzegorz Kocur "grzegorz.kocur@softwaremill.com"'
-        tag = 'eu.gcr.io/project201/' + project.name.toLowerCase() + ':latestmarta'
+        tag = 'eu.gcr.io/project201/' + project.name.toLowerCase() + ':latest2marta'
         jvmArgs = [ "-Dcom.sun.management.jmxremote.port=5555",
                     "-Dcom.sun.management.jmxremote.authenticate=false",
                     "-Dcom.sun.management.jmxremote.ssl=false"]

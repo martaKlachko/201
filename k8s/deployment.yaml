@@ -18,7 +18,7 @@ spec:
             name: kafka-streams-scaling-jmx-configmap
       containers:
         - name: kafka-streams-scaling
-          image: eu.gcr.io/project201/kafka-streams-scaling:latestmarta
+          image: eu.gcr.io/project201/kafka-streams-scaling:latest2marta
           imagePullPolicy: Always
           env:
             - name: BOOTSTRAP_SERVERS_CONFIG
