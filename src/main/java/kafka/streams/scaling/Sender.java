@@ -18,7 +18,7 @@ public class Sender {
 
   public static void main(String[] args) {
     Properties properties = new Properties();
-    properties.put("bootstrap.servers", "localhost:9092");
+    properties.put("bootstrap.servers", "10.4.0.8:9092");
     properties.put("acks", "all");
     properties.put("retries", 0);
     properties.put("batch.size", 16384);

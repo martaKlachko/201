@@ -22,7 +22,7 @@ public class App {
     Properties config = new Properties();
     config.put(StreamsConfig.APPLICATION_ID_CONFIG, "ks-scaling-app-app-id");
     config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,
-      Optional.ofNullable(System.getenv("BOOTSTRAP_SERVERS_CONFIG")).orElse("PLAINTEXT://localhost:9092")
+      Optional.ofNullable(System.getenv("BOOTSTRAP_SERVERS_CONFIG")).orElse("PLAINTEXT://10.4.0.8:9092")
     );
     config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
     config.put(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, 100);
